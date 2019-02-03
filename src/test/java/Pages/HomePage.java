@@ -1,11 +1,15 @@
 package Pages;
 
+import Utilites.ConfigurationReader;
 import Utilites.Driver;
+import Utilites.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+import java.util.concurrent.TimeUnit;
+
+public class HomePage extends TestBase {
 
     public HomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -32,5 +36,9 @@ public class HomePage {
 
     @FindBy(xpath = "(//li[@style='display: block;'])[6]")
     public WebElement InventoryPage;
+
+
+
+
 
 }
